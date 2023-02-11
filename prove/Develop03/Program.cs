@@ -4,6 +4,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        // Journal j = new Journal();
+        // Console.WriteLine("Enter a Scripture: ");
+        // string input = Console.ReadLine();
+        Word word = new Word();
+        Reference reference = new Reference("John",10,9);
+        Reference reference2 = new Reference("John",10,9,20);
+        // Console.WriteLine(reference.Book);
+        // Console.WriteLine(reference.Chapter);
+        // Console.WriteLine(reference.Verse);
+        // Console.WriteLine(reference2.EndVerse);
+        Scripture scripture = new Scripture();
+        Console.WriteLine("===============================");
+        scripture.HideWords("HELLO");
+        // scripture.GetDisplayText();
+        // scripture.HideWords(input);
+        // Console.WriteLine(word.getDisplayText());
     }
 }
