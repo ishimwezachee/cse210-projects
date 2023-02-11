@@ -32,21 +32,40 @@ class Scripture{
                     // string[] words = input.Split(' ');
                     // pick a three random words form my list 
                     Random rnd = new Random();
-                    int randomIndex = rnd.Next(0, _words.Count);
-                    string hiddenWord = _words[randomIndex];
+                    int randomIndex1 = rnd.Next(_words.Count);
+                    int randomIndex2 = rnd.Next(_words.Count);
+                    int randomIndex3 = rnd.Next(_words.Count);
+                    string hiddenWord1 = _words[randomIndex1];
+                    string hiddenWord2 = _words[randomIndex2];
+                    string hiddenWord3 = _words[randomIndex3];
+                    Console.WriteLine(hiddenWord1);
+                    Console.WriteLine(hiddenWord2);
+                    Console.WriteLine(hiddenWord3);
 
-                    // for (int i = 0; i < _words.Count; i++)
-                    // {
+                    for (int i = 0; i < _words.Count; i++){
                     //     for(int j =0;j <_words[i].Length;j++){
                     //         char charactor = _words[i][j];
                     //        Console.WriteLine($"{j}:{charactor}");
-
-                    //     }
-                        // Console.WriteLine($"{i}:{_words[i]}");
-                        // if (i == 0 || i == 1)
-                        // {
-                        //     _words[i] = new string('_', _words[i].Length);
-                        // }
+                    Console.WriteLine(_words[i]);
+                    string currentWord = _words[i];
+                    if(_words[i] == hiddenWord1){
+                       int len = _words[i].Length;
+                        string hiddenWord = new string('_',len);
+                        _words[i] = _words[i].Replace(_words[i],hiddenWord);
+                    }
+                    
+                    if(_words[i] == hiddenWord2){
+                       int len = _words[i].Length;
+                        string hiddenWord = new string('_',len);
+                        _words[i] = _words[i].Replace(_words[i],hiddenWord);
+                    }
+                    if(_words[i] == hiddenWord3){
+                       int len = _words[i].Length;
+                        string hiddenWord = new string('_',len);
+                        _words[i] = _words[i].Replace(_words[i],hiddenWord);
+                    }
+                    Console.WriteLine(_words[i]);
+                    }
                     }
 
                   

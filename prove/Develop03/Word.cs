@@ -9,7 +9,7 @@ class Word{
     private string _text; // this a string which will be considered as an array 
     // class constructors 
     public Word(){
-        _text = "If my people who are called by My name humble themselves, and pray and seek My face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land. then I will hear from heaven and will forgive their sin and heal their land.";
+        _text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac.";
     }
     // Methods 
     //  public string Text
