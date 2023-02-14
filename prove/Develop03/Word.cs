@@ -9,7 +9,7 @@ class Word{
     private string _text; // this a string which will be considered as an array 
     // class constructors 
     public Word(){
-        _text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac.";
+        _text = "For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God's one and only Son.";
     }
     // Methods 
     //  public string Text

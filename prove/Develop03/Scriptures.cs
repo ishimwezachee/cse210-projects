@@ -5,8 +5,6 @@ class Scripture{
     // It means that _reference is an instance of Reference class. 
     //  Journal j = new Journal();
     // string verse = "If my people who are called by My name humble themselves, and pray and seek My face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.";
-
-    //  Words = new List<Word>();
     private Reference _reference;
     private List<string> _words = new List<string>();    
     // private List<Word> _words = new List<Word>();
@@ -14,22 +12,34 @@ class Scripture{
     // public Scripture(Reference reference,string text){}
     // Methods 
 
+    // Load from a file 
+public string LoadFromFile()
+{
+    string filename = "script.txt";
+    string[] lines = System.IO.File.ReadAllLines(filename);
+    string fileData = "";
+
+    foreach (string line in lines)
+    {
+        fileData += line + Environment.NewLine;
+    }
+
+    return fileData;
+}
     // Number of words to be hidden 
-    public void HideWords(string input){
+    public void HideWords(){
          Word word = new Word();
         //  An array of words 
           _words = word.getDisplayText().Split(' ').ToList();
-        // _words = word.getDisplayWord().Split(' ');
-        // foreach(string text in _words){
-        //     Console.WriteLine(_words.Count);
-        //   }
-        // the true will be replace with the one from the method. 
-        while(true & input != "quit"){
+        string result = String.Join(" ",_words);
+        // Console.WriteLine("For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God's one and only Son.");
+        Console.WriteLine(LoadFromFile());
+        while(true){
+        string input = Console.ReadLine();
               {
-                //Console.WriteLine("Press Enter to hide the next two words...");
-                ConsoleKeyInfo keyInfo = Console.ReadKey();
-                if (keyInfo.Key == ConsoleKey.Enter){
-                    // string[] words = input.Split(' ');
+                 ConsoleKeyInfo keyInfo = Console.ReadKey();
+                if (keyInfo.Key == ConsoleKey.Enter && input != "quit"){
+                    // Console.Clear();
                     // pick a three random words form my list 
                     Random rnd = new Random();
                     int randomIndex1 = rnd.Next(_words.Count);
@@ -38,16 +48,9 @@ class Scripture{
                     string hiddenWord1 = _words[randomIndex1];
                     string hiddenWord2 = _words[randomIndex2];
                     string hiddenWord3 = _words[randomIndex3];
-                    Console.WriteLine(hiddenWord1);
-                    Console.WriteLine(hiddenWord2);
-                    Console.WriteLine(hiddenWord3);
-
+                     Console.Clear();
                     for (int i = 0; i < _words.Count; i++){
-                    //     for(int j =0;j <_words[i].Length;j++){
-                    //         char charactor = _words[i][j];
-                    //        Console.WriteLine($"{j}:{charactor}");
-                    Console.WriteLine(_words[i]);
-                    string currentWord = _words[i];
+                       
                     if(_words[i] == hiddenWord1){
                        int len = _words[i].Length;
                         string hiddenWord = new string('_',len);
@@ -63,13 +66,31 @@ class Scripture{
                        int len = _words[i].Length;
                         string hiddenWord = new string('_',len);
                         _words[i] = _words[i].Replace(_words[i],hiddenWord);
+                    } 
+                    
+                    // string [] words = new string[_words.Count];
+                    // List<string> words = _words.ToList();
+                    // _words.CopyTo(words,0);
+                    // words[i] = _words[i];
+                    // words.Add(_words[i]);
+                    // int siz = words.Count;
+                    // if(siz>0){
+                        // Console.Clear();
+                    // }
+                    
+                    Console.Write(_words[i] + " ");
+                    // Console.Clear();
+                    // _words.Clear();
                     }
-                    Console.WriteLine(_words[i]);
                     }
-                    }
-
-                  
+                    else 
+                    {
+                    Console.WriteLine("The program is done");
+                    return;
                 }
+
+                }
+                
         }
     }
 

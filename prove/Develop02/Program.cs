@@ -137,7 +137,6 @@ class Journal{
         foreach (string line in lines)
         {
             string[] parts = line.Split(",");
-
             string fileData = parts[0];
             Console.WriteLine(fileData);
         }

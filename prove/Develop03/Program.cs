@@ -15,8 +15,7 @@ class Program
         // Console.WriteLine(reference.Verse);
         // Console.WriteLine(reference2.EndVerse);
         Scripture scripture = new Scripture();
-        Console.WriteLine("===============================");
-        scripture.HideWords("HELLO");
+        scripture.HideWords();
         // scripture.GetDisplayText();
         // scripture.HideWords(input);
         // Console.WriteLine(word.getDisplayText());
