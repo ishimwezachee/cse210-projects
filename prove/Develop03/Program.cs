@@ -8,8 +8,8 @@ class Program
         // Console.WriteLine("Enter a Scripture: ");
         // string input = Console.ReadLine();
         Word word = new Word();
-        Reference reference = new Reference("John",10,9);
-        Reference reference2 = new Reference("John",10,9,20);
+        // Reference reference = new Reference("John",10,9);
+        // Reference reference2 = new Reference("John",10,9,20);
         // Console.WriteLine(reference.Book);
         // Console.WriteLine(reference.Chapter);
         // Console.WriteLine(reference.Verse);
