@@ -8,8 +8,9 @@ class Word{
 
     private string _text; // this a string which will be considered as an array 
     // class constructors 
+    Scripture scripture = new Scripture();
     public Word(){
-        _text = "For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God's one and only Son.";
+        _text = scripture.LoadFromFile();
     }
     // Methods 
     //  public string Text

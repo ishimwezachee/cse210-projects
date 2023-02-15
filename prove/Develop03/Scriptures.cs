@@ -3,17 +3,10 @@ using System.Collections.Generic;
 
 class Scripture {
   // attributes 
-  // It means that _reference is an instance of Reference class. 
-  //  Journal j = new Journal();
-  // string verse = "If my people who are called by My name humble themselves, and pray and seek My face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.";
-  // private Reference _reference;
   Reference reference = new Reference("John", 3, 17, 18);
   private List < string > _words = new List < string > ();
   // private List<Word> _words = new List<Word>();
-  // class constructors 
-  // public Scripture(Reference reference,string text){}
   // Methods 
-
   // Load from a file 
   public string LoadFromFile() {
     string filename = "script.txt";
@@ -23,7 +16,6 @@ class Scripture {
     foreach(string line in lines) {
       fileData += line + Environment.NewLine;
     }
-
     return fileData;
   }
   // Number of words to be hidden 
@@ -31,10 +23,7 @@ class Scripture {
     Word word = new Word();
     //  An array of words 
     _words = word.getDisplayText().Split(' ').ToList();
-    // string result = String.Join(" ", _words);
-    // Console.WriteLine("For God did not send his Son into the world to condemn the world, but to save the world through him. Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God's one and only Son.");
     Console.WriteLine($"{reference.Book} {reference.Chapter}:{reference.StartVerse} - {reference.EndVerse} {LoadFromFile()}");
-    // Console.WriteLine();
     while (true) {
       string input = Console.ReadLine();
       ConsoleKeyInfo keyInfo = Console.ReadKey();
@@ -70,15 +59,19 @@ class Scripture {
           Console.Write(_words[i] + " ");
         }
 
-        } else {
+        }else if (input == "quit"){
         Console.WriteLine("The program is done");
         return;
       }
 
+       if (input =="" && _words.All(s => s.All(c=>c=='_'))){
+          Console.WriteLine("All words are hidden");
+          return;
+        }
+
     }
 
   }
-
 
   // Render the text of the descripture with reference at the beginning 
   public void GetDisplayText() {

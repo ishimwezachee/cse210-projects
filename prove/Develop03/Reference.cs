@@ -52,12 +52,7 @@ class Reference{
     
     // Will display the texts in the format we will expect. 
     public void getReferenceText(){
-        // example of the expected result. 
-        // Book: John
-        //Chapter: 3
-        // startVers: 16
-        // Proverbs 3:5-6  
-        Console.WriteLine("John 3:16");
+      //   Console.WriteLine("John 3:16");
     }
 
 }
