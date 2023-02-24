@@ -38,6 +38,7 @@ using System;
           Console.WriteLine("Get ready...");
           Spinning();
           Console.WriteLine("");
+          // logic for breathing ...
           DateTime startTime = DateTime.Now;
           DateTime endTime = startTime.AddSeconds(duration);
           while(DateTime.Now < endTime){
