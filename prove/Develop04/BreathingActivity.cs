@@ -2,7 +2,6 @@ using System;
 
     public class BreathingActivity:Activity {
           // attributes (private)
-
         private string _breathing = "Breathing"; 
         private string _activityDescription;
         // private string _randomPrompt<list>; 
@@ -48,7 +47,10 @@ using System;
             Console.WriteLine("");
             Console.WriteLine("");
          }
-         finishMessage(duration,_breathing);
+         
+         WellDone();
+         Spinning();
+         FinishMessage(duration,_breathing);
          Spinning();
         }
 

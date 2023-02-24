@@ -23,9 +23,11 @@ using System;
           _startMessageActivity= $"Welcome to the {activity} Activity.";
           return _startMessageActivity;
         }
-        public void finishMessage(int duration ,string activity){
+        public void WellDone(){
           Console.WriteLine("Well done!!");
-          Console.WriteLine("");
+        }
+        public void FinishMessage(int duration ,string activity){
+           Console.WriteLine("");
           Console.WriteLine($"You have completed another {duration} seconds of the {activity} Activity.");
         }
         public string DescribtionMessage (string description){
