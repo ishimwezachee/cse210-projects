@@ -58,7 +58,7 @@ class Program
         // We are going to make it spin for 8 second 
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(10);
+        DateTime endTime = startTime.AddSeconds(8);
 
         int i = 0;
 
@@ -76,6 +76,6 @@ class Program
 
 
 
-        Console.WriteLine("Done.");
+        // Console.WriteLine("Done.");
     }
 }

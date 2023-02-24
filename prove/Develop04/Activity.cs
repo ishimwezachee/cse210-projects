@@ -23,6 +23,11 @@ using System;
           _startMessageActivity= $"Welcome to the {activity} Activity.";
           return _startMessageActivity;
         }
+        public void finishMessage(int duration ,string activity){
+          Console.WriteLine("Well done!!");
+          Console.WriteLine("");
+          Console.WriteLine($"You have completed another {duration} seconds of the {activity} Activity.");
+        }
         public string DescribtionMessage (string description){
           _descriptionActivity= $"This activity will help you by {description}";
           return _descriptionActivity;
@@ -32,7 +37,31 @@ using System;
         int num = int.Parse(choice);
         return num;
         }
-        public void voidFinishMessage(){}
+        public void Spinning(){
+           List<string> animationsString = new List<string>();
+            animationsString.Add("|");
+            animationsString.Add("/");
+            animationsString.Add("-");
+            animationsString.Add("\\");
+            animationsString.Add("|");
+            animationsString.Add("/");
+            animationsString.Add("-");
+            animationsString.Add("\\");
+            DateTime startTime = DateTime.Now;
+            DateTime endTime = startTime.AddSeconds(8);
+            int i = 0;
+            while(DateTime.Now < endTime){
+                string s = animationsString[i];
+                Console.Write(s);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+                i++;
+                if (i>= animationsString.Count)
+                {
+                    i = 0;
+                }
+            }
+        }
         public void GetReadyTimer(){} 
         public int  HowLongTimer(){
          Console.Write("How long, in seconds, would you like for your session? ");
