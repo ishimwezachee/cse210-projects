@@ -23,13 +23,14 @@ class Program
         n = activity.GetRandomPrompt();
         BreathingActivity breathingAct = new BreathingActivity();
         ReflectingActivity reflectingAct = new ReflectingActivity();
+        ListingActivity listAct = new ListingActivity();
         if(n == 1){
           Console.Clear();
           breathingAct.breathingActivity();
         }else if(n == 2){
-          reflectingAct.reflection();
+          reflectingAct.ReflectionActivity();
         }else if (n == 3){
-          Console.WriteLine("Selected 3");
+          listAct.Listing();
         }else if(n == 4){
            Console.WriteLine("Selected 4");
         }else{

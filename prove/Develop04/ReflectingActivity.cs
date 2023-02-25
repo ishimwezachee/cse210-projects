@@ -1,6 +1,7 @@
 using System;
 
     public class ReflectingActivity:Activity {
+        // attributes 
         private string _reflection = "Reflecting"; 
         private string _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
         // constructors 
@@ -42,15 +43,13 @@ using System;
             return reflectReply[index];
         }
         public void exprienceAswering(){}
-        public void reflection(){
+        public void ReflectionActivity(){
             Console.Clear();
             Console.WriteLine(StartMessage(_reflection));
             Console.WriteLine("");
             Console.WriteLine(_description);
             Console.WriteLine("");
             int duration = HowLongTimer();
-            // I have to consider how the user will reflecting as well. and user bellow duration
-            // Console.WriteLine(duration);
             Console.Clear();
             Console.WriteLine("Get ready...");
             Spinning();
