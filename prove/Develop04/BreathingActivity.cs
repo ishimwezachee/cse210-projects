@@ -10,7 +10,6 @@ using System;
         // getters and setters
         // methods 
         public void BreathIn(){
-        Console.Clear();
          Console.Write($"Breathe in..."); 
         for( int i = 3; i>0; i--)
         {

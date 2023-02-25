@@ -5,9 +5,6 @@ class Program
     static void Main(string[] args)
     {
 
-
-        // initialize Activity itself 
-
         int n = -1;
 
         while(n != 4){
@@ -32,7 +29,7 @@ class Program
         }else if (n == 3){
           listAct.Listing();
         }else if(n == 4){
-           Console.WriteLine("Selected 4");
+           Console.WriteLine();
         }else{
            Console.WriteLine("Please select among the given choice");
         }

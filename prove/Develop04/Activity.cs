@@ -39,6 +39,15 @@ using System;
         int num = int.Parse(choice);
         return num;
         }
+        public void TimeToStart(){
+        Console.Write($"You may begin in..."); 
+        for( int i = 5; i>0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+        }
         public void Spinning(){
            List<string> animationsString = new List<string>();
             animationsString.Add("|");
