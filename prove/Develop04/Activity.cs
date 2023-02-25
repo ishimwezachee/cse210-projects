@@ -4,9 +4,7 @@ using System;
         // attributes (private)
         private string _startMessageActivity ;
         private string _descriptionActivity;
-        private string _finishMessage;
-        private string _activityDoneMessage;
-        private int _durationInSec;
+        private string _wellDone = "Well done!!";
     //    private string _getReady ;
        
         // private string _randomPrompt<list>; 
@@ -24,7 +22,7 @@ using System;
           return _startMessageActivity;
         }
         public void WellDone(){
-          Console.WriteLine("Well done!!");
+          Console.WriteLine(_wellDone);
         }
         public void FinishMessage(int duration ,string activity){
            Console.WriteLine("");

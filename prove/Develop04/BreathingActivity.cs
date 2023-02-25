@@ -28,6 +28,7 @@ using System;
             }
             }
         public void breathingActivity(){
+          Console.Clear();
           Console.WriteLine(StartMessage(_breathing));
           Console.WriteLine("");
           Console.WriteLine(DescribtionMessage("Walking you through breathing in and out slowly. Clear your mind and focus on your breathing."));
