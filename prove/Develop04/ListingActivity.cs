@@ -8,12 +8,6 @@ using System;
     // constructors 
     // methods 
     public string randomListingQuestion(){
-        // List<string> listQuestions = new List<string>();
-        // listQuestions.Add("Who are people that you appreciate?");
-        // listQuestions.Add("What are personal strengths of yours?");
-        // listQuestions.Add("Who are people that you have helped this week?");
-        // listQuestions.Add("When have you felt the Holy Ghost this month?");
-        // listQuestions.Add("Who are some of your personal heroes?");
         string filePath = "randomListingQuestion.txt";
         string[] lines = File.ReadAllLines(filePath);
         List<string> listQuestions = lines.ToList();
