@@ -21,16 +21,9 @@ namespace GoalSpace
             List<string> myList = new List<string>();
             return myList;
         }
-       // display name Method
-
-    //    public void DisplayName(){}
-    //    // Display description
-    //    public void DisplayDescription(){}
-    //    // Display Points 
-    //    public void DisplayPoints(){}
-          public virtual string DisplayGoal(string name, string description){
-           return $"{name} ({description})";
-          }
+        // public virtual string DisplayGoal(string name, string description){
+        //    return $"{name} ({description})";
+        //   }
        // save goals 
        public void saveGoals(){}
        // loag goals 

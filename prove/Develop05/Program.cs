@@ -6,7 +6,10 @@ namespace GoalSpace
 {
     static void Main(string[] args)
     {
+        // data storage 
+        List<string> data = new List<string>();
         // initialize my classes 
+        Goal goal = new Goal();
         SimpleGoal Sgoal = new SimpleGoal();
         ExternalGoal Exgoal = new ExternalGoal();
         CheckListGoal Chgoal = new CheckListGoal();
@@ -26,7 +29,6 @@ namespace GoalSpace
         Console.Write("Select a choice from the menu: ");
 
         // get selection prompt 
-        Goal goal = new Goal();
         n = goal.GetRandomPrompt();
         if(n ==1){
              int t = -1;
@@ -43,6 +45,7 @@ namespace GoalSpace
                 t = 6;
             }else if( t == 2){
                 Exgoal.ExternalGoalMethod();
+                t = 6;
             }else if (t == 3){
                 Chgoal.CheckListGoalMethod();
             }
@@ -50,10 +53,15 @@ namespace GoalSpace
         
         }else if (n==2){
             // logics to List All my created Goal
-            Console.Clear();
-            Sgoal.DisplaySimpleGoal();
+            // create a list that I will add tasks into 
+           Sgoal.ListMyGoals(data);
+           Exgoal.ListMyExtGoals(data);
+           Chgoal.ListMyCheckGoals(data);
+           Console.WriteLine(data.Count());
         }else if (n ==3){
             Console.WriteLine("Save Goals");
+            // Save Goals logics 
+
         }else if(n == 4){
             Console.WriteLine("Load Goals");
         }else if(n == 5){
