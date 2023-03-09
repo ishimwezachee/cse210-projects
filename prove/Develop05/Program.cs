@@ -1,5 +1,6 @@
 using System;
-
+using System.IO;
+using System.Collections.Generic;
 namespace GoalSpace
 {
     class Program
@@ -7,7 +8,7 @@ namespace GoalSpace
     static void Main(string[] args)
     {
         // data storage 
-        List<string> data = new List<string>();
+        // List<string> data = new List<string>();
         // initialize my classes 
         Goal goal = new Goal();
         SimpleGoal Sgoal = new SimpleGoal();
@@ -52,18 +53,22 @@ namespace GoalSpace
         }
         
         }else if (n==2){
-            // logics to List All my created Goal
-            // create a list that I will add tasks into 
-           Sgoal.ListMyGoals(data);
-           Exgoal.ListMyExtGoals(data);
-           Chgoal.ListMyCheckGoals(data);
-           Console.WriteLine(data.Count());
+            Sgoal.LoadFromFile();
         }else if (n ==3){
-            Console.WriteLine("Save Goals");
-            // Save Goals logics 
-
+             Console.WriteLine("What is the file name?");
+             string userFileName = Console.ReadLine();
+             using (StreamWriter outputFile = new StreamWriter($"{userFileName}.txt",true)){
+                // function to add the data to file 
+                 string filename = "default.txt";
+                 string[] lines = System.IO.File.ReadAllLines(filename);
+                 foreach (string line in lines){
+                    string[] parts = line.Substring(3).Split(",");
+                    string fileData = parts[0];
+                    outputFile.WriteLine(fileData);
+                    }
+             }
         }else if(n == 4){
-            Console.WriteLine("Load Goals");
+        
         }else if(n == 5){
             Console.WriteLine("Record Goals");
         }else {
