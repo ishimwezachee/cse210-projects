@@ -9,7 +9,7 @@ namespace GoalSpace
         // methods 
         public void CheckListGoalMethod(){
            Console.WriteLine("CheckList Goal Logics");
-        }
+           }
     }
 
 }
