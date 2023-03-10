@@ -5,7 +5,7 @@ namespace GoalSpace
     public class Goal
     {
         // attributes 
-        //   private List<string> myList = new List<string>();
+        //  private List<string> myList = new List<string>();
         // constructors 
         // properties 
          public List<string> MyList { get; set; } = new List<string>();
