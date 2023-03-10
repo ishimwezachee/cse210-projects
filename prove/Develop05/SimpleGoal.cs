@@ -46,6 +46,21 @@ namespace GoalSpace
         }
         
     }
+
+      public void LoadFromFileGoalName(string goalName){
+        if (string.IsNullOrEmpty(goalName)){
+        string[] lines = System.IO.File.ReadAllLines(goalName);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(",");
+            string fileData = parts[0];
+            Console.WriteLine(fileData);
+        }      
+    }else{
+        Console.WriteLine("There is no such file name!!!!");
+    }
+      
+    }
     
     }
 

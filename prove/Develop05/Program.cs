@@ -68,9 +68,14 @@ namespace GoalSpace
                     }
              }
         }else if(n == 4){
-        
+            // Load the goals 
+            // ask the user the name of tha file what name of a file he/she want to load 
+            // Load the files based on the user suggestion. 
+            Console.Write("What is the filename for the goal file? ");
+            string goalName = Console.ReadLine();
+            Sgoal.LoadFromFileGoalName(goalName);
         }else if(n == 5){
-            Console.WriteLine("Record Goals");
+            //Record goals 
         }else {
             Console.WriteLine("Out !! ");
         }
