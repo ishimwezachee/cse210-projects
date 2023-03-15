@@ -11,7 +11,7 @@ namespace GoalSpace
          private int _GoalPoints{get; set;}
         // constructors 
         // methods 
-        public void ExternalGoalMethod(){
+         public override void DispalyGoalsMethod(){
            Console.Write("What is the name of your Goal? ");
            _GoalName =  Console.ReadLine();
            Console.Write("What is a short description of it? ");

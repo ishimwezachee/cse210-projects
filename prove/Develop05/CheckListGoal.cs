@@ -12,7 +12,7 @@ namespace GoalSpace
          private int _bonus{get; set;}
         // constructors 
         // methods 
-        public void CheckListGoalMethod(){
+         public override void DispalyGoalsMethod(){
            Console.Write("What is the name of your Goal? ");
            _GoalName =  Console.ReadLine();
            Console.Write("What is a short description of it? ");
@@ -24,7 +24,7 @@ namespace GoalSpace
 
             Console.Write("What is the bonus for accomplishing it that many times? ");
            _bonus =  int.Parse(Console.ReadLine());
-             saveCheckGoal(_GoalName, _GoalDescription,_times,_bonus);
+            saveCheckGoal(_GoalName, _GoalDescription,_times,_bonus);
         }
 
        public void saveCheckGoal(string name, string description,int times, int bonus){

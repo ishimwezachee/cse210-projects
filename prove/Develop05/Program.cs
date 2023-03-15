@@ -42,13 +42,13 @@ namespace GoalSpace
             t = int.Parse(Console.ReadLine());
             if(t == 1){
                 // Console.WriteLine("Simple Goal");
-                Sgoal.SimpleGoalMethd();
+                Sgoal.DispalyGoalsMethod();
                 t = 6;
             }else if( t == 2){
-                Exgoal.ExternalGoalMethod();
+                Exgoal.DispalyGoalsMethod();
                 t = 6;
             }else if (t == 3){
-                Chgoal.CheckListGoalMethod();
+                Chgoal.DispalyGoalsMethod();
             }
         }
         

@@ -16,12 +16,13 @@ namespace GoalSpace
         return num;
         }
          // record event
-        public List<string> RecordEvent()
-        {
-            List<string> myList = new List<string>();
-            return myList;
-        }
-    public  void SaveUserData(string userName, string data)
+        // public List<string> RecordEvent()
+        // {
+        //     List<string> myList = new List<string>();
+        //     return myList;
+        // }
+        
+        public  void SaveUserData(string userName, string data)
         {
             // Create a file path using the user's name
             string filePath = $"{userName}.txt";
@@ -37,7 +38,9 @@ namespace GoalSpace
         //    return $"{name} ({description})";
         //   }
        // save goals 
-       public void saveGoals(){}
+       public virtual void DispalyGoalsMethod(){
+         Console.WriteLine("Display the Galsls");
+       }
        // loag goals 
        public void loadGoals(){} 
     }

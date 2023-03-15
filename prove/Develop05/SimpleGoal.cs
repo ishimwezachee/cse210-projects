@@ -8,20 +8,21 @@ namespace GoalSpace
         // attributes 
          private string _GoalName{get; set;}
          private string _GoalDescription{get; set;}
-         private string _GoalPoints{get; set;}
+         private int _GoalPoints{get; set;}
         // constructors 
         // methods 
-        public void SimpleGoalMethd(){
+        public override void DispalyGoalsMethod(){
            //Console.WriteLine("Simple Goal Logics");
            // simple goals implimentations 
            Console.Write("What is the name of your Goal? ");
            _GoalName =  Console.ReadLine();
            Console.Write("What is a short description of it? ");
            _GoalDescription =  Console.ReadLine();
-           Console.Write("What is the amount of points associated with this goal ");
-           int GoalPoints =  int.Parse(Console.ReadLine());
-        //   MyList.Add($"[ ] {_GoalName} ({_GoalDescription})"); 
-         saveSgoal(_GoalName, _GoalDescription);
+           Console.Write("What is the amount of points associated with this goal");
+           string points = Console.ReadLine();
+           _GoalPoints = int.Parse(points);
+            // _GoalPoints =  int.Parse(Console.ReadLine());
+            saveSgoal(_GoalName,_GoalDescription);
         }
 
        public void saveSgoal(string name, string description){
@@ -34,7 +35,7 @@ namespace GoalSpace
             }
        }
       public void LoadFromFile(){
-        // display the data from the file 
+        // display the data from the file `
         string filename = "default.txt";
         string[] lines = System.IO.File.ReadAllLines(filename);
 
