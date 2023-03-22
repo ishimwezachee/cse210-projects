@@ -1,9 +1,12 @@
 using System;
-
-class Program
+using System.IO;
+using System.Collections.Generic;
+namespace schoolLibrary
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello FinalProject World!");
+    class Program
+{
+    static void Main(string[] args){
+     Console.WriteLine("Final project");
     }
+}
 }

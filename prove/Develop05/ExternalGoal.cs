@@ -7,7 +7,7 @@ namespace GoalSpace
     {
         // attributes 
          private string _GoalName{get; set;}
-         private string _GoalDescription{get; set;}
+         private string _GoalDescription{get; set;} 
          private int _GoalPoints{get; set;}
         // constructors 
         // methods 
