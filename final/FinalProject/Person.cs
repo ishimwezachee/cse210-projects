@@ -12,15 +12,20 @@ namespace schoolLibrary
         private bool Parent_permission { get; set; }
         private int Id { get; set; }
         // constructors 
-        public Person( string name,int age,int id,bool parent_permission)
-        {
-            Name = name;
-            Age = age;
-            Id = id;
-            Parent_permission = parent_permission;
-            rentals = new List<string>();
-        }
+        
+        // public Person( string name,int age,int id,bool parent_permission)
+        // {
+        //     Name = name;
+        //     Age = age;
+        //     Id = id;
+        //     Parent_permission = parent_permission;
+            
+        // }
         // Properties 
+        public List<string> createdRentals(){
+            rentals = new List<string>();
+            return rentals;
+        } 
         // Methods 
         public void add_rental(string person){
           rentals.Add(person);

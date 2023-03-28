@@ -21,6 +21,9 @@ namespace schoolLibrary
             Console.WriteLine("6 - List all rentals for a given person id");
             Console.WriteLine("7 - Exit");
             n = int.Parse(Console.ReadLine());
+            // create instances 
+            Student student = new Student();
+            // Activity activity = new Activity();
 
             if(n == 1)
             {
@@ -39,7 +42,7 @@ namespace schoolLibrary
                  int num = int.Parse(Console.ReadLine());
                 if(num == 1){
                     // create student: create_student method 
-                    Console.WriteLine("Create a student ");
+                    student.create_student();
                 }else if(num == 2){
                     // create teacher : create_teacher metod 
                     Console.WriteLine("Create a teacher");
