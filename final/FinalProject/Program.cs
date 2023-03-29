@@ -23,16 +23,19 @@ namespace schoolLibrary
             n = int.Parse(Console.ReadLine());
             // create instances 
             Student student = new Student();
+            Teacher teacher = new Teacher();
+            Book book = new Book();
+            Person person = new Person();
             // Activity activity = new Activity();
 
             if(n == 1)
             {
                 // list_all_books
-                Console.Clear();
-                Console.WriteLine("Selected one");
+                book.list_all_books();
             }else if(n == 2)
             {
                 // list_all_people
+                person.list_all_people();
                 Console.WriteLine("Select two");
                 
             }else if(n == 3)
@@ -45,7 +48,7 @@ namespace schoolLibrary
                     student.create_student();
                 }else if(num == 2){
                     // create teacher : create_teacher metod 
-                    Console.WriteLine("Create a teacher");
+                    teacher.create_teacher();
                 }
                 Console.WriteLine("Selected three");
                 // create a person : student & teacher 
@@ -54,7 +57,7 @@ namespace schoolLibrary
             else if(n == 4)
             {
                 // create_book
-                Console.WriteLine("Selected four");
+                book.create_book(n);
             }
             else if(n == 5)
             {

@@ -14,7 +14,13 @@ namespace schoolLibrary
         // Properties 
         // Methods 
         public void create_student(){
-            Console.WriteLine("Student is created");
+            Console.Write("Age: ");
+            Age  = int.Parse(Console.ReadLine());
+            Console.Write("Name: ");
+            Name = Console.ReadLine();
+            Console.Write("Has parent permission? [Y/N]: ");
+            Parent_permission = Console.ReadLine();
+            // create a person 
         }
     }
 }

@@ -7,9 +7,9 @@ namespace schoolLibrary
     {
         // attributes 
         private List<string> rentals { get; set; }
-        private string Name { get; set; }
-        private int Age { get; set; }
-        private bool Parent_permission { get; set; }
+        protected string Name { get; set; }
+        protected int Age { get; set; }
+        protected string Parent_permission { get; set; }
         private int Id { get; set; }
         // constructors 
         
@@ -30,8 +30,8 @@ namespace schoolLibrary
         public void add_rental(string person){
           rentals.Add(person);
         }
-        public virtual bool can_use_service(){
-             Parent_permission = Age >= 18 ? true : false;
+        public virtual string can_use_service(){
+             Parent_permission = Age >= 18 ? "Y" : "N";
              return Parent_permission;
         }
         public string validate_name(){
@@ -44,5 +44,9 @@ namespace schoolLibrary
             }
         }
         public void is_of_age(){}
+        public void list_all_people()
+        {
+            
+        }
     }
 }

@@ -14,12 +14,18 @@ namespace schoolLibrary
         
         // Properties 
         // Methods 
-        public override bool can_use_service()
+        public override string can_use_service()
         {
-            return true;
+            return "Y";
         }
         public void create_teacher(){
-            Console.WriteLine("Teacher is created");
+            Console.Write("Age: ");
+            Age = int.Parse(Console.ReadLine());
+            Console.Write("Name: ");
+            Name = Console.ReadLine();
+            Console.Write("Specialization: ");
+            string Specialization = Console.ReadLine();
+            // create a person 
         }
     }
 }

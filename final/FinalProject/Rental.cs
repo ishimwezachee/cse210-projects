@@ -11,5 +11,9 @@ namespace schoolLibrary
         // constructors 
         // Properties 
         // Methods 
+        public List<string> geneareteStore(List<string> store){
+              store = new List<string>();
+              return store;
+        }
     }
 }
