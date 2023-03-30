@@ -44,9 +44,8 @@ namespace schoolLibrary
             }
         }
         public void is_of_age(){}
-        public void list_all_people()
-        {
-            
+        public void list_all_people(){
+            Console.WriteLine("The lists of people");
         }
     }
 }

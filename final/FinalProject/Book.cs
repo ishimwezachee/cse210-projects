@@ -20,14 +20,7 @@ namespace schoolLibrary
              Title = Console.ReadLine();
             Console.Write("Name: ");
               Author = Console.ReadLine();
-            // Console.Write("Specialization: ");
-            // string Specialization = Console.ReadLine();
-            // create a person 
-            //   Object[] library = {
-            //     new { key = "key", value = "value"}};
             List<object> library = new List<object>();
-            // library.Add(new { title = Title, author = Author });
-            // Console.WriteLine(library[0]);
             saveToFile(Title,Author);;
         }
         public void saveToFile(string title, string author)

@@ -36,7 +36,6 @@ namespace schoolLibrary
             {
                 // list_all_people
                 person.list_all_people();
-                Console.WriteLine("Select two");
                 
             }else if(n == 3)
             {

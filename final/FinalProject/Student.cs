@@ -21,6 +21,16 @@ namespace schoolLibrary
             Console.Write("Has parent permission? [Y/N]: ");
             Parent_permission = Console.ReadLine();
             // create a person 
+            saveToFile(Name,Age,Parent_permission);
         }
+        public void saveToFile(string name, int age,string parent_permission)
+        {
+            string fileName = "person.txt";
+            using (StreamWriter outputFile = new StreamWriter(fileName,true))
+            {
+                outputFile.WriteLine($"(Student) Name: {name},Age: {age},permission:{parent_permission}");
+            }
+        }
+
     }
 }
