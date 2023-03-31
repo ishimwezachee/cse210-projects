@@ -1,3 +1,4 @@
 (Student) Name: kenny,Age: 33,permission:y
 (Student) Name: w,Age: 3,permission:y
 (Teacher) Name: Chris,Age: 30,Specialization:math
+(Student)[147] Name: student,Age: 20,permission:Y

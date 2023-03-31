@@ -11,9 +11,11 @@ namespace schoolLibrary
         // constructors 
         // Properties 
         // Methods 
-        public List<string> geneareteStore(List<string> store){
-              store = new List<string>();
-              return store;
+        public void create_rentals()
+        {
+            Console.WriteLine("Select a book from the following list by number");
+            int select = int.Parse(Console.ReadLine());
+            
         }
     }
 }

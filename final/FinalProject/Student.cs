@@ -14,6 +14,8 @@ namespace schoolLibrary
         // Properties 
         // Methods 
         public void create_student(){
+            Random rnd = new Random();
+            int Id = rnd.Next(1,1000);
             Console.Write("Age: ");
             Age  = int.Parse(Console.ReadLine());
             Console.Write("Name: ");
@@ -21,14 +23,15 @@ namespace schoolLibrary
             Console.Write("Has parent permission? [Y/N]: ");
             Parent_permission = Console.ReadLine();
             // create a person 
-            saveToFile(Name,Age,Parent_permission);
+            saveToFile(Name,Age,Parent_permission,Id);
+            Console.WriteLine("The teacher is created successflly");
         }
-        public void saveToFile(string name, int age,string parent_permission)
+        public void saveToFile(string name, int age,string parent_permission,int id)
         {
             string fileName = "person.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName,true))
             {
-                outputFile.WriteLine($"(Student) Name: {name},Age: {age},permission:{parent_permission}");
+                outputFile.WriteLine($"{id})(Student)Name: {name},Age: {age},permission:{parent_permission}");
             }
         }
 

@@ -19,6 +19,8 @@ namespace schoolLibrary
             return "Y";
         }
         public void create_teacher(){
+            Random rnd = new Random();
+            int Id = rnd.Next(1,1000);
             Console.Write("Age: ");
             Age = int.Parse(Console.ReadLine());
             Console.Write("Name: ");
@@ -26,15 +28,16 @@ namespace schoolLibrary
             Console.Write("Specialization: ");
             string Specialization = Console.ReadLine();
             // create a person 
-            saveToFile(Name,Age,Specialization);
+            saveToFile(Name,Age,Specialization,Id);
+            Console.WriteLine("The teacher is created successflly");
         }
 
-        public void saveToFile(string name, int age,string Specialization)
+        public void saveToFile(string name, int age,string Specialization,int id)
         {
             string fileName = "person.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName,true))
             {
-                outputFile.WriteLine($"(Teacher) Name: {name},Age: {age},Specialization:{Specialization}");
+                outputFile.WriteLine($"{id})(Teacher)Name: {name},Age: {age},Specialization:{Specialization}");
             }
         }
     }

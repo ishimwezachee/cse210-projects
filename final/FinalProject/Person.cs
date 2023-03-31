@@ -44,8 +44,17 @@ namespace schoolLibrary
             }
         }
         public void is_of_age(){}
-        public void list_all_people(){
-            Console.WriteLine("The lists of people");
+        public void list_all_people()
+        {
+        // display the data from the file `
+        string filename = "person.txt";
+        string[] lines = System.IO.File.ReadAllLines(filename);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(",");
+            string fileData = parts[0];
+            Console.WriteLine(fileData);
+        }
         }
     }
 }

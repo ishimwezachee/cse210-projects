@@ -20,15 +20,17 @@ namespace schoolLibrary
              Title = Console.ReadLine();
             Console.Write("Name: ");
               Author = Console.ReadLine();
-            List<object> library = new List<object>();
-            saveToFile(Title,Author);;
+              Random rnd = new Random();
+              int val = rnd.Next(1,50);
+            // List<object> library = new List<object>();
+            saveToFile(Title,Author,val);
         }
-        public void saveToFile(string title, string author)
+        public void saveToFile(string title, string author,int n)
         {
             string fileName = "book.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName,true))
             {
-                outputFile.WriteLine($" Title: {title},Author: {author}");
+                outputFile.WriteLine($" {n})Title: {title},Author: {author}");
             }
         }
 
