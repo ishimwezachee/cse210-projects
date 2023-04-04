@@ -26,6 +26,7 @@ namespace schoolLibrary
             Teacher teacher = new Teacher();
             Book book = new Book();
             Person person = new Person();
+            rentals rental = new rentals();
             // Activity activity = new Activity();
 
             if(n == 1)
@@ -61,7 +62,7 @@ namespace schoolLibrary
             else if(n == 5)
             {
                 // create_rental
-                Console.WriteLine("Selected Five");
+                rental.create_rentals();
             }
             else if(n == 6)
             {
