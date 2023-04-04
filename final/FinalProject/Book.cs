@@ -30,7 +30,7 @@ namespace schoolLibrary
             string fileName = "book.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName,true))
             {
-                outputFile.WriteLine($" {n})Title: {title},Author: {author}");
+                outputFile.WriteLine($"{n})Title: {title},Author: {author}");
             }
 
             Console.WriteLine("Book is created Book successfully");

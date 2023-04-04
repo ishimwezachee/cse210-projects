@@ -1,5 +1,5 @@
 using System;
-
+using System.Text.RegularExpressions;
 namespace schoolLibrary
 {
     public class Teacher: Person
@@ -14,9 +14,14 @@ namespace schoolLibrary
         
         // Properties 
         // Methods 
-        public override string can_use_service()
-        {
-            return "Y";
+        public override string validate_name(string name){
+            Regex regex = new Regex(@"^[a-zA-Z]+$");
+            if(regex.IsMatch(name)){
+                return name;
+            }else{
+                Console.WriteLine("Please add a valid name");
+                return "Please add a valid name";
+            }
         }
         public void create_teacher(){
             Random rnd = new Random();
@@ -24,7 +29,7 @@ namespace schoolLibrary
             Console.Write("Age: ");
             Age = int.Parse(Console.ReadLine());
             Console.Write("Name: ");
-            Name = Console.ReadLine();
+            Name = validate_name(Console.ReadLine());
             Console.Write("Specialization: ");
             string Specialization = Console.ReadLine();
             // create a person 
@@ -37,9 +42,8 @@ namespace schoolLibrary
             string fileName = "person.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName,true))
             {
-                outputFile.WriteLine($"{id})(Teacher)Name: {name},Age: {age},Specialization:{Specialization}");
+                outputFile.WriteLine($"{id}.(Teacher)Name: {name},Age: {age},Specialization:{Specialization}");
             }
-            Console.WriteLine("Person is created Book successfully");
         }
     }
 }

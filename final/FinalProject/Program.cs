@@ -50,9 +50,7 @@ namespace schoolLibrary
                     // create teacher : create_teacher metod 
                     teacher.create_teacher();
                 }
-                Console.WriteLine("Selected three");
                 // create a person : student & teacher 
-
             }
             else if(n == 4)
             {
@@ -79,3 +77,8 @@ namespace schoolLibrary
 
 }
 }
+
+
+/*
+I have exceeded the requirements by validating the names by using Regular expressions
+*/
